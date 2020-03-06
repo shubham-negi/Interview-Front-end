@@ -1,0 +1,63 @@
+@import "../../globals.scss";
+
+.bubble {
+  background-color: #ffffff;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 4px #b2b2b2;
+  display: inline-block;
+  padding: 0rem 2rem 1.2rem 2rem;
+  position: relative;
+  vertical-align: top;
+  p {
+    margin-top: 0rem;
+  }
+}
+.anothr::before {
+  box-shadow: -3px -3px 2px -1px rgba(178, 178, 178, 0.4);
+  right: -9px;
+}
+
+.bubble::before {
+  background-color: #ffffff;
+  content: " ";
+  display: block;
+  height: 20px;
+  position: absolute;
+  bottom: -8px;
+  left: 36px;
+  transform: rotate(29deg) skew(-35deg);
+  -moz-transform: rotate(29deg) skew(-35deg);
+  -ms-transform: rotate(29deg) skew(-35deg);
+  -o-transform: rotate(29deg) skew(-35deg);
+  -webkit-transform: rotate(210deg) skew(8deg);
+  width: 36px;
+}
+
+div.bubble-container {
+  margin: 1rem 2.6rem;
+  div.bubble p.fancy-quote::before {
+    font-family: Georgia, serif;
+    position: relative;
+    font-size: 6em;
+    display: inline;
+    line-height: 2rem;
+    top: 44px;
+    left: -6px;
+    content: "\201C";
+    color: #ee3b00;
+  }
+  div.user-icon {
+    @extend %flex-in-center;
+    justify-content: normal;
+    margin-top: 1.4rem;
+    div.user-info {
+      margin-left: 0.6rem;
+      p {
+        margin: 0;
+      }
+      span.job-title {
+        font-size: 12px;
+      }
+    }
+  }
+}

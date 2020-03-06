@@ -1,0 +1,94 @@
+$standard-padding: 1% 6%;
+$primary-color: #ee3b00;
+$secondary-color: #8a8684;
+$primary-fonts: Arial, Helvetica, sans-serif;
+
+/* words and letter spacings */
+$letter-space-in: 0.4px;
+$word-space-in: 1.2px;
+
+/* banner common styling */
+%full-width-banner {
+  width: 100%;
+  // background-size: cover !important;
+  color: #fff;
+  @extend %flex-in-center-as-col;
+}
+
+%no-space-in-out {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header & Footer both shares almost identical layout */
+%common-fh {
+  // padding: $standard-padding;
+  background: #171513;
+  color: $secondary-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* standards hyperlins */
+%common-links {
+  color: inherit;
+  text-decoration: none;
+}
+
+%flex-in-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* layout as column */
+%flex-in-center-as-col {
+  @extend %flex-in-center;
+  flex-direction: column;
+}
+
+// LABELS
+%sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@mixin set-bg($bg-style) {
+  background: $bg-style;
+}
+
+%ax-icons {
+  width: 16px;
+  height: auto;
+  display: inline-block;
+  margin: 0rem 0.4rem;
+}
+
+%normal-btn {
+  @extend %flex-in-center;
+  @extend %common-links;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border: 0;
+  background: #ee3b00;
+  border-radius: 2rem;
+}
+
+// CUSTOM HEADING
+%h1-custom {
+  font-weight: normal;
+  font-size: 2.4rem;
+}
+
+%h2-custom {
+  font-weight: normal;
+  font-size: 1.8rem;
+}

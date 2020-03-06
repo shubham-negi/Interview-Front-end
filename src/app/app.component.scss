@@ -1,0 +1,106 @@
+@import "./globals.scss";
+
+/*
+ * Main page banner
+*/
+div.app-banner {
+  @extend %full-width-banner;
+  background: url("../assets/images/banner.png") no-repeat center center;
+  height: 60vh;
+  padding: 6.8rem 0rem;
+  background-size: cover;
+  h1 {
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+    font-weight: normal;
+    width: 40%;
+    text-align: center;
+  }
+  div {
+    @extend %flex-in-center;
+  }
+}
+
+/*
+ * Content area after banner
+*/
+div.main-content {
+  @extend %flex-in-center;
+  padding: 6%;
+  align-items: flex-start;
+  div {
+    width: 46%;
+    // color: #000;
+    h2 {
+      @extend %h2-custom;
+    }
+  }
+  img {
+    width: 100%;
+    max-width: 46%;
+    height: auto;
+  }
+}
+
+/*
+ * Testimonial section
+*/
+div.user-feedback {
+  padding: 6%;
+  @extend %flex-in-center-as-col;
+  background: #f7f7f7;
+  h2 {
+    margin-bottom: 2rem;
+    @extend %h2-custom;
+  }
+  div.feedback-box {
+    width: 100%;
+    align-items: flex-start;
+    @extend %flex-in-center;
+    app-feedback-thumbnail {
+      flex: 0 0 33%;
+    }
+  }
+}
+@media only screen and (max-width: 64em) {
+  div.user-feedback {
+    padding-bottom: 18%;
+    div.feedback-box {
+      app-feedback-thumbnail:nth-of-type(2),
+      app-feedback-thumbnail:nth-of-type(3) {
+        display: none;
+      }
+    }
+  }
+
+  .feedback-box {
+    flex-direction: column;
+  }
+  .app-banner {
+    div {
+      flex-direction: column;
+      align-items: stretch !important;
+      width: 100%;
+    }
+    h1 {
+      width: 72% !important;
+      margin: 0rem 3rem;
+    }
+  }
+  div.main-content {
+    flex-direction: column;
+    margin-top: 2.2rem;
+    color: #746d6b;
+    div {
+      width: 100%;
+      h2 {
+        margin-bottom: 3rem;
+      }
+    }
+    img {
+      width: 100%;
+      max-width: 100%;
+      margin: 1.6rem 0rem;
+    }
+  }
+}

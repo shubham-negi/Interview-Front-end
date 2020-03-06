@@ -1,0 +1,57 @@
+<div>
+  <header>
+    <app-header></app-header>
+  </header>
+  <main>
+    <section>
+      <div class="app-banner">
+        <h1>Integer bibendum sit amet arcu vel egestas.</h1>
+        <div>
+          <app-service-icon
+            [service]="element"
+            *ngFor="let element of serviceList"
+          ></app-service-icon>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="main-content">
+        <div>
+          <h2>
+            Mauris id bibendum est. Proin dapibus sollicitudin iaculis, Maecenas
+            condimentum maximus laoreet.
+          </h2>
+          <p>
+            In maximus euismod egestas. Fusce tincidunt posuere est non
+            elementum. In maximus euismod egestas. Fusce tincidunt posuere est
+            non elementum. In maximus euismod egestas. Fusce tincidunt posuere
+            est non elementum. In maximus euismod egestas. Fusce tincidunt
+            posuere est non elementum. In maximus euismod egestas. Fusce
+            tincidunt posuere est non elementum.
+          </p>
+        </div>
+        <img
+          src="../assets/images/people-on-globe.png"
+          alt="this images contains a picture of globe with peoples pinned on it."
+        />
+      </div>
+    </section>
+    <section>
+      <div class="user-feedback">
+        <h2>Testimonials</h2>
+        <div class="feedback-box">
+          <app-feedback-thumbnail
+            *ngFor="let feedback of feedbackList"
+            [feed]="feedback"
+          ></app-feedback-thumbnail>
+        </div>
+      </div>
+    </section>
+    <section>
+      <app-contact-form></app-contact-form>
+    </section>
+  </main>
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div>

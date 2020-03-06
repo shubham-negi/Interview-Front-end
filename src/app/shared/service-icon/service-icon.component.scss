@@ -1,0 +1,33 @@
+@import "../../globals.scss";
+
+div {
+  @extend %flex-in-center-as-col;
+  margin: 0.8rem;
+  border: 1px solid #47433f;
+  padding: 2.6rem;
+  border-radius: 0.2rem;
+  /* these dimensions are to make icons height equal,  */
+  img {
+    height: 72px;
+    width: auto;
+  }
+  span {
+    margin-top: 0.6rem;
+    color: #fff;
+    // font-size: 12px;
+  }
+}
+@media only screen and (max-width: 64em) {
+  div {
+    flex-direction: row;
+    padding: 1rem;
+    // width: 87vh;
+    justify-content: flex-start;
+    padding-left: 2rem;
+    img {
+      flex-direction: row;
+      height: 40px;
+      margin-right: 1.4rem;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import "../globals.scss";
+
+div.footer-wrapper {
+  @extend %common-fh;
+  /* overriding padding as footer has more gutter space than header */
+  padding: 3% 6%;
+  font-size: 14px;
+  div.social-links {
+    @extend %flex-in-center;
+    nav {
+      @extend %flex-in-center;
+      a {
+        @extend %common-links;
+        img.social-icons {
+          @extend %ax-icons;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 64em) {
+  div.footer-wrapper {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6% 6%;
+    // font-size: 1.2rem;
+    div {
+      margin-bottom: 2rem;
+    }
+  }
+}

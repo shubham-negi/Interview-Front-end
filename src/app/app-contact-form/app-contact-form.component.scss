@@ -1,0 +1,101 @@
+@import "../globals.scss";
+
+div.container {
+  @extend %full-width-banner;
+  background: url("../../assets/images/form-bg-banner.png") no-repeat center
+    center #171513;
+  background-size: cover;
+  padding: 5rem 0rem;
+  div.content {
+    text-align: center;
+    margin-bottom: 1.2rem;
+    h2 {
+      @extend %h2-custom;
+    }
+  }
+  div.form-box {
+    width: 68%;
+    form {
+      @extend %flex-in-center-as-col;
+      div.user-info {
+        @extend %flex-in-center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 1.2rem;
+        div {
+          flex: 0 0 30%;
+          input {
+            width: 95%;
+            padding: 12px 0px 12px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+          label {
+            @extend %sr-only;
+          }
+        }
+      }
+      div.message-box {
+        width: 100%;
+        @extend %flex-in-center;
+        label {
+          @extend %sr-only;
+        }
+        textarea {
+          width: 100%;
+          padding: 12px 0px 12px 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          resize: vertical;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+      }
+      button {
+        @extend %normal-btn;
+        margin-top: 1.8rem;
+        cursor: pointer;
+        padding: 0.6rem 2rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 64em) {
+  div.container {
+    div.content {
+      width: 78%;
+      font-size: 1.2rem;
+      h1 {
+        font-size: 2rem;
+        font-weight: normal;
+      }
+      form div {
+        flex-direction: column;
+        margin-bottom: 0rem !important;
+        div {
+          width: 100%;
+          display: contents;
+          input {
+            margin-bottom: 0.8rem;
+            width: 100% !important;
+          }
+        }
+      }
+    }
+    div.form-box {
+      form div.user-info {
+        flex-direction: column;
+        margin-bottom: 0rem;
+        div {
+          width: 100%;
+          input {
+            margin-bottom: 0.6rem;
+            width: 96%;
+          }
+        }
+      }
+      width: 84% !important;
+    }
+  }
+}
