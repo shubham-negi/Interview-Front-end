@@ -7,7 +7,7 @@ The code has been written using **Angular(v8)**, which supports Typescript(3.4).
 - Direct access from here: [visit](https://shubham-negi.github.io)
 - Make sure you've atleast **node 10.x** and **angular 8.x** installed to run this project 
 - Find Web accessibility reports in **/a11y** directory
-- Find desktop view and mobile view screenshots under **/view**
+- Find desktop view and mobile view screenshots under **/screenshot**
 ### **==================================**
 
 ### Background
