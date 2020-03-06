@@ -1,5 +1,15 @@
 # Axelerant: Front-end Interview
 
+### **==================================**
+The code has been written using **Angular(v8)**, which supports Typescript(3.4). The UI components as well as the grid-based layout has been build with **FlexBox**, is written in **SCSS**.
+#### Please note
+
+- Direct access from here: [visit](https://shubham-negi.github.io)
+- Make sure you've atleast **node 10.x** and **angular 8.x** installed to run this project 
+- Find Web accessibility reports in **/a11y** directory
+- Find desktop view and mobile view screenshots under **/view**
+### **==================================**
+
 ### Background
 
 This exercise is to test your Front-end skills. You have to take the following [designs](./designs) and convert them to a website.
